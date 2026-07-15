@@ -56,13 +56,14 @@
         "interval": 10,
         "format": "{}% ",
         "max-length": 10,
-        "on-click": "exec kitty --title=htop -e htop"
+        "on-click": "exec kitty --title=htop -e btop"
     },
 
     "memory": {
         "interval": 30,
         "format": "{}% ",
-        "max-length": 10
+        "max-length": 10,
+        "on-click": "exec kitty --title=htop -e htop"
     },
 
     "network": {
