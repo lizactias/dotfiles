@@ -1,0 +1,82 @@
+{
+    "layer": "top",
+
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 8,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/submap",
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "cpu",
+        "memory",
+        "network"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "●"
+        }
+    },
+
+    "hyprland/window": {
+        "max-length": 20
+    },
+
+    "clock": {
+        "format": "󰥔 {:%d/%m/%y %H:%M}",
+        "tooltip-format": "<small>{calendar}</small>",
+
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "none",
+            "on-scroll": 1,
+
+            "format": {
+                "months": "<span color='#f9f5d7'><b>{}</b></span>",
+                "weekdays": "<span color='#b8bb26'><b>{}</b></span>",
+                "days": "{}",
+                "weeks": "<span color='#83a598'><b>W{}</b></span>",
+                "today": "<span color='#fb4934'><b>{}</b></span>"
+            }
+        }
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "{}% ",
+        "max-length": 10,
+        "on-click": "exec kitty --title=htop -e htop"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "{}% ",
+        "max-length": 10
+    },
+
+    "network": {
+        "format": "",
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "󰤭",
+
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "󰖪",
+
+        "max-length": 50,
+        "on-click": "exec nmrs"
+    }
+}
