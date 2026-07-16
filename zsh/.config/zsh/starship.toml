@@ -1,8 +1,9 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
 add_newline = false
+scan_timeout = 1000
 
-format = "$directory$git_branch$git_status$nodejs$rust$golang$php$character"
+format = "$directory$git_branch$git_status$character"
 
 [directory]
 format = "[$path](bold #b8bb26) "
@@ -23,22 +24,6 @@ modified = "[~$count ](#fabd2f)"
 untracked = "[?$count ](#83a598)"
 deleted = "[-$count ](#fb4934)"
 conflicted = "[!$count ](#fb4934)"
-
-[nodejs]
-symbol = ""
-format = "[ $version](#b8bb26) "
-
-[rust]
-symbol = ""
-format = "[ $version](#d3869b) "
-
-[golang]
-symbol = ""
-format = "[ $version](#83a598) "
-
-[php]
-symbol = ""
-format = "[ $version](#d3869b) "
 
 [character]
 success_symbol = "[❯](bold #b8bb26)"
